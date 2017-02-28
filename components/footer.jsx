@@ -7,7 +7,7 @@ module.exports = Footer = React.createClass({
         <hr />
         <div className="row-fluid">
           <div className="span12">
-            <div>The Risberg Family</div>
+            <div>From the book "React Quickly" (Manning Press)</div>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ class MessageList extends React.Component {
         <p>No messages yet</p>
     )
     return (
-      <table className="table ">
+      <table className="table">
         <caption>Messages</caption>
         <thead>
           <tr>
@@ -64,10 +64,10 @@ class NewMessage extends React.Component {
           <form className="well form-inline" onKeyUp={this.keyup} onSubmit={this.addMessage}>
             <input
               type="text" name="username"
-              className="input-small" placeholder="Azat" ref="name"/>
+              className="input-small" placeholder="name" ref="name"/>
             <input
               type="text" name="message" className="input-small"
-              placeholder="Hello!" ref="message" />
+              placeholder="message" ref="message" />
             <a id="send" className="btn btn-primary"
               onClick={this.addMessage}>POST</a>
           </form>
@@ -88,11 +88,9 @@ class MessageBoard extends React.Component {
     request.get(url)
       .then(response => response.data)
       .then(messages => {
-        console.log(messages)
         if(!messages || !messages.length){
           return;
         }
-        console.log(messages)
         this.setState({messages: messages})
       })
   }
@@ -104,7 +102,6 @@ class MessageBoard extends React.Component {
         if(!data){
           return console.error('Failed to save')
         }
-        console.log('Saved!')
         messages.unshift(data)
         this.setState({messages: messages})
     })
