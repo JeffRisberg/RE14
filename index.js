@@ -71,8 +71,6 @@ mongodb.MongoClient.connect(url, (err, db) => {
                 footer: ReactDOMServer.renderToString(Footer()),
                 messageBoard: ReactDOMServer.renderToString(MessageBoard({messages: docs})),
                 props: '<script type="text/javascript">var messages=' + JSON.stringify(docs) + '</script>'
-                // props: '<script type="text/javascript">var messages='+JSON.stringify({})+'</script>'
-                // messageBoard: ReactDOMServer.renderToString(MessageBoard({messages: [{_id:1, name: 'azat', message: 'hey'}]}))
             })
         })
     })
