@@ -3,9 +3,9 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
-const Header = require('../components/header.jsx')
-const Footer = require('../components/footer.jsx')
-const MessageBoard = require('../components/board.jsx')
+const Header = require('../components/Header.js')
+const Footer = require('../components/Footer.js')
+const MessageBoard = require('../components/MessageBoard.js')
 
 ReactDOM.render(<Header />, document.getElementById('header'))
 ReactDOM.render(<Footer />, document.getElementById('footer'))

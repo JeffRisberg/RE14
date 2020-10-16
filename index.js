@@ -14,9 +14,9 @@ const express = require('express'),
     ReactDOMServer = require('react-dom/server'),
     React = require('react')
 
-const Header = React.createFactory(require('./components/header.jsx')),
-    Footer = React.createFactory(require('./components/footer.jsx')),
-    MessageBoard = React.createFactory(require('./components/board.jsx'))
+const Header = React.createFactory(require('./components/Header.js')),
+    Footer = React.createFactory(require('./components/Footer.js')),
+    MessageBoard = React.createFactory(require('./components/MessageBoard.js'))
 
 mongodb.MongoClient.connect(url, (err, db) => {
     if (err) {
